@@ -1,4 +1,4 @@
-#### WELCOME TO THIS B-TREE
+#### WELCOME TO THIS B-TREE PROGRAM!
 
 This program is designed to perform the following tasks:
 
