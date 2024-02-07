@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 
+using namespace std;
+
 // Constants for B-tree properties
 const int MAX_KEYS = 5;  // Maximum number of keys in a node
 const int MIN_KEYS = 3;  // Minimum number of keys in a node
@@ -25,13 +27,13 @@ void traverse(TreeNode* current);
 
 int main() {
     int N;
-    std::cout << "How many random integer keys would you like in your B-tree? " << std::endl;
-    std::cin >> N;
+    cout << "How many random integer keys would you like in your B-tree? " << endl;
+    cin >> N;
 
     while (N < 399) {
-        std::cout << "The value you entered was less than 400, please enter a value greater than 400. " << std::endl;
-        std::cout << "How many random integer keys would you like in your B-tree? " << std::endl;
-        std::cin >> N;
+        cout << "The value you entered was less than 400, please enter a value greater than 400. " << endl;
+        cout << "How many random integer keys would you like in your B-tree? " << endl;
+        cin >> N;
     }
 
     int randArray[N];
@@ -61,17 +63,17 @@ int main() {
         insertInTree(randArray[i]);
     }
 
-    std::cout << "\nThe following keys are all of the random keys generated between 0 and 3N that appear in the B-Tree:" << std::endl;
+    cout << "\nThe following keys are all of the random keys generated between 0 and 3N that appear in the B-Tree:" << endl;
     traverse(root);
-    std::cout << "\n\nThe following keys are all of the random keys in the range of N and 2N that appear in the B-Tree:" << std::endl;
+    cout << "\n\nThe following keys are all of the random keys in the range of N and 2N that appear in the B-Tree:" << endl;
 
     for (int j = 0; j < N; j++) {
         if ((randArray[j] <= findbtwnRange) && (randArray[j] >= N)) {
-            std::cout << randArray[j] << " ";
+            cout << randArray[j] << " ";
         }
     }
 
-    std::cout << "\n";
+    cout << "\n";
 
     return 0;
 }
@@ -163,7 +165,7 @@ void traverse(TreeNode* current) {
         int index;
         for (index = 0; index < current->numKeys; index++) {
             traverse(current->children[index]);
-            std::cout << current->keys[index + 1] << " ";
+            cout << current->keys[index + 1] << " ";
         }
         traverse(current->children[index]);
     }
