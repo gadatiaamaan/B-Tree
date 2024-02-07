@@ -1,4 +1,4 @@
-#### WELCOME TO THIS B-TREE PROGRAM!
+#### WELCOME TO THIS B-TREE
 
 This program is designed to perform the following tasks:
 
@@ -7,6 +7,20 @@ This program is designed to perform the following tasks:
 2. **Build B-Tree**: It constructs a 5-way B-tree using the randomly generated keys in the sequence order.
 
 3. **Search and Return Keys**: The program searches for and returns any keys in the range [N, 2*N].
+
+---
+
+#### Technologies, Algorithms, and Concepts Used
+
+This program is implemented in C++ and utilizes several key technologies, algorithms, and concepts to implement a B-tree data structure efficiently:
+
+1. **B-tree**: The program implements a B-tree data structure for efficient storage and retrieval of large sets of data. B-trees are balanced multiway search trees, commonly used in database systems and file systems.
+
+2. **Node Splitting**: When a node in the B-tree becomes full, the program employs node splitting, a fundamental operation in B-tree insertion. This ensures that the tree remains balanced and maintains its properties.
+
+3. **Node Insertion**: The program handles the insertion of keys into B-tree nodes, ensuring that the tree's properties are preserved at all times. It follows the rules of B-tree insertion, such as redistributing keys between nodes when necessary.
+
+4. **Traversal**: Traversal of the B-tree is performed to output keys in sorted order. This traversal ensures that all keys stored in the tree are visited and displayed correctly.
 
 ---
 
@@ -36,4 +50,3 @@ After running the program, you can clean up by typing `make clean` into the term
 
 - **Input**: N (Number of elements)
 - **Output**: B-tree; Keys found in the range [N, 2*N]
-
